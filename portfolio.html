@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="portfolio.css">
+    <title> Yagna Patel </title>
+    <style>
+      /* Thick red border */
+hr.new4 {
+  border: 5px solid #14ffec;
+  border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+  
+  <div class="tab">
+    Yagna Patel 
+    <button class="tablinks" onclick="openTab(event, 'Aboutme')">About me</button>
+    <button class="tablinks" onclick="openTab(event, 'Volunteering')">Volunteering</button>
+    <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+    <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
+  </div>
+  
+    
+    <div id="Aboutme" class="tabcontent" style="display:block">
+    <center>
+      <i> <p>"A man can be as great as he wants to be. If you believe in yourself and have the courage, the determination, the dedication, the competitive drive and if you are willing to sacrifice the little things in life and pay the price for the things that are worthwhile, it can be done." - Vince Lombardi</p></i> 
+    <p> This is one of my all time favourite quotes from a legend himself MR. Vince Lambordy who has the SuperBowl trophy named after him.  </p>
+    </center>
+    </div>
+    <div id="Volunteering" class="tabcontent" style="display:none">
+      
+     <center><p>Light the Night (Atlanta)</p>
+      <p>Gold rush Parade (Villa Rica)</p>
+      <p>BAPS Organization & Charity</p>
+      <p>Books for Africa(Atlanta)</p>
+      </center>
+    </div>
+    <div id="Skills" class="tabcontent" style="display:none">
+      <div class="row">
+        <div class="column" style="background-color:#313131;">
+        <h2>Hard Skills</h2>
+        <hr class="new4">
+        <b><P>JAVA</P>
+          <P>HTML</P> 
+          <P>CSS</P>
+          <P>JAVASCRIPT</P>
+          <p>Microsoft Office</p>
+          </b>
+        </div>
+        <div class="column" style="background-color: #313131;">
+        <h2>Soft Skills</h2>
+        <hr class="new4">
+        <b><p>Bilingual</p>
+          <p>Leadership </p>
+         <p> Good Communicator</p>
+        </b>
+        </div>
+      </div>
+
+    </div>
+    
+    
+    
+    
+    
+    <script>
+      document.getElementByClassName('tablinks')[0].click()
+      function openTab(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      </script>
+</body>
+</html>
